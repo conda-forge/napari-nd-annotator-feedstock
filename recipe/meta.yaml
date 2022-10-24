@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-nD-annotator-{{ version }}.tar.gz
   sha256: fa9122947149e44745b03fe498244e169007984d75e9fb6f713bb8b78050a5e3
+  patches:
+    - qtpy.patch  # USe qtpy instead of PyQt5
 
 build:
   noarch: python

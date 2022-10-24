@@ -1,0 +1,13 @@
+diff --git a/src/napari_nd_annotator/boundingbox/qt_bounding_box_control.py b/src/napari_nd_annotator/boundingbox/qt_bounding_box_control.py
+index a7b4a5d..204f7bd 100644
+--- a/src/napari_nd_annotator/boundingbox/qt_bounding_box_control.py
++++ b/src/napari_nd_annotator/boundingbox/qt_bounding_box_control.py
+@@ -2,7 +2,7 @@
+ from typing import Iterable
+ 
+ import napari
+-from PyQt5.QtWidgets import QCheckBox
++from qtpy.QtWidgets import QCheckBox
+ from napari._qt.widgets.qt_color_swatch import QColorSwatchEdit
+ from napari.utils.action_manager import action_manager
+ from qtpy.QtCore import Qt
