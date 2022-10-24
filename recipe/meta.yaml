@@ -31,6 +31,7 @@ requirements:
     - opencv
     - python >=3.8
     - qtpy
+    - scikit-image
     - vispy
 
 test:
