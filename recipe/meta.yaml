@@ -16,9 +16,13 @@ build:
 
 requirements:
   host:
+    - cython
     - numpy
     - pip
     - python >=3.8
+    - scipy
+    - setuptools
+    - wheel
   run:
     - magicgui
     - matplotlib-base
