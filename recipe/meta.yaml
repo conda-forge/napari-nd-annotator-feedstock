@@ -1,5 +1,5 @@
 {% set name = "napari-nd-annotator" %}
-{% set version = "0.0.7" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-nD-annotator-{{ version }}.tar.gz
-  sha256: 8f8f6c41588a4f2ab091cac1b0cbaced21c297a83e2d50329a842fb252e27b39
+  sha256: 1c1cbd31433eeb34460b4e66cc2a07fdaa42358b9df50fdf5a20c624d2f97ecd
 
 build:
   noarch: python
