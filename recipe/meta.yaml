@@ -19,7 +19,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - pip
-    - python >=3.8
+    - python
     - cython
     - numpy
   run:
@@ -28,7 +28,7 @@ requirements:
     - napari >=0.4.11
     - numpy
     - opencv
-    - python >=3.8
+    - python
     - qtpy
     - scikit-image >=0.19
     - simpleitk
