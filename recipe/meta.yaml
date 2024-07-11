@@ -43,6 +43,7 @@ test:
     - pip check
   requires:
     - pip
+    - pyqt
 
 about:
   home: https://github.com/bauerdavid/napari-nD-annotator
