@@ -1,5 +1,5 @@
 {% set name = "napari-nd-annotator" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,30 +7,37 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-nD-annotator-{{ version }}.tar.gz
-  sha256: 1c1cbd31433eeb34460b4e66cc2a07fdaa42358b9df50fdf5a20c624d2f97ecd
+  sha256: 5ca6fa82045a39f533e0e7f90f786510160d0632699a894ec4ff780d0c1e7b84
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
+  build:
+    - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python >=3.8
+    - cython
+    - numpy
   run:
     - magicgui
     - matplotlib-base
-    - napari ==0.4.15
+    - napari >=0.4.11
     - numpy
     - opencv
     - python >=3.8
     - qtpy
+    - scikit-image >=0.19
+    - simpleitk
     - vispy
 
 test:
   imports:
     - napari_nd_annotator
+    - napari_nd_annotator.mean_contour._essentials
   commands:
     - pip list
     - pip check
