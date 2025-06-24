@@ -44,6 +44,7 @@ test:
     - napari_nd_annotator
     - napari_nd_annotator.mean_contour._essentials
   commands:
+    - export QT_QPA_PLATFORM=offscreen
     - pip list
     - pip check
   requires:
