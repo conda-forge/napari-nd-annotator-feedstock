@@ -27,6 +27,7 @@ requirements:
     - cython
     - numpy
   run:
+    - magic-class
     - magicgui
     - matplotlib-base
     - napari >=0.4.11
