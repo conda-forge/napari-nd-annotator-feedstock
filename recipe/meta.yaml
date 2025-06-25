@@ -44,12 +44,17 @@ test:
     - napari_nd_annotator
     - napari_nd_annotator.mean_contour._essentials
   commands:
-    - export QT_QPA_PLATFORM=offscreen
     - pip list
     - pip check
   requires:
     - pip
     - pyqt
+    - qt-main
+    - xorg-libx11
+    - xorg-libxext
+    - xorg-libxcb
+    - xorg-xcb-util
+    - libxcb
 
 about:
   home: https://github.com/bauerdavid/napari-nD-annotator
