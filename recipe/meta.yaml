@@ -50,8 +50,6 @@ test:
     - pyqt
     - pip
     - libxcb
-    - libx11
-    - libxext
     - xcb-util
     - xcb-util-image
     - xcb-util-keysyms
