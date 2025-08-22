@@ -38,6 +38,7 @@ requirements:
     - scikit-image >=0.19
     - simpleitk
     - vispy
+    - magic-class
 
 test:
   imports:
