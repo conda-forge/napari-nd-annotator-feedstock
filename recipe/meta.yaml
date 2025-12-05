@@ -1,17 +1,19 @@
 {% set name = "napari-nd-annotator" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-nD-annotator-{{ version }}.tar.gz
-  sha256: 5ca6fa82045a39f533e0e7f90f786510160d0632699a894ec4ff780d0c1e7b84
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 1691676e4ead0b48f58eb574345a032d9ce11a4eabd7c65f56ce77eb41c33900
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  script_env:
+    - QT_QPA_PLATFORM=offscreen
 
 requirements:
   build:
@@ -26,6 +28,7 @@ requirements:
     - python
     - cython
     - numpy
+    - setuptools
   run:
     - magicgui
     - matplotlib-base
@@ -37,6 +40,7 @@ requirements:
     - scikit-image >=0.19
     - simpleitk
     - vispy
+    - magic-class
 
 test:
   imports:
