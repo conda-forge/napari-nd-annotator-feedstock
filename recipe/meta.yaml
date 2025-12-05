@@ -12,6 +12,8 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  script_env:
+    - QT_QPA_PLATFORM=offscreen
 
 requirements:
   build:
@@ -26,6 +28,7 @@ requirements:
     - python
     - cython
     - numpy
+    - setuptools
   run:
     - magicgui
     - matplotlib-base
@@ -37,7 +40,7 @@ requirements:
     - scikit-image >=0.19
     - simpleitk
     - vispy
-
+    - magic-class
 test:
   imports:
     - napari_nd_annotator
