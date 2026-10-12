@@ -10,7 +10,10 @@ source:
   sha256: b910aad807d798c5a428526c2b2ef3e9a68f049e1c59f4a1ed41007fddfa7d07
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    # the sdist ships .cpp files pre-generated against a newer numpy .pxd; force regeneration
+    - {{ PYTHON }} -c "import pathlib; [p.with_suffix('.cpp').unlink(missing_ok=True) for p in pathlib.Path('src').rglob('*.pyx')]"
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
   script_env:
     - QT_QPA_PLATFORM=offscreen
